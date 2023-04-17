@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Feedly Background Articles Options</title>
+  <style>
+    body {
+      padding-bottom: 0.8em;
+      padding-left: 1em;
+      font-size: 0.9rem;
+    }
+
+    label {
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    input {
+      padding: 0 0.3em;
+    }
+
+    div {
+      display: flex;
+      gap: 1em;
+      margin-top: 1.2em;
+    }
+
+    p {
+      margin: 0;
+      position: relative;
+      top: 0.15em;
+      color: #2196f3;
+    }
+
+    p.failed {
+      color: #e91e63;
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 0.8rem;
+      padding: 0.2em 0.8em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <label for="shortcutkey">Shortcut Key Character:</label>
+  <input type="text" id="shortcutkey" name="shortcutkey">
+
+  <div>
+    <button id="set">Set</button>
+    <p id="status"></p>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+
+</html>

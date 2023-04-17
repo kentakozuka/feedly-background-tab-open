@@ -1,8 +1,11 @@
 {
-  const hotkey = 'i';
+  let shortcutkey;
+  chrome.storage.sync.get({ shortcutkey: 'i' }, function (items) {
+    shortcutkey = items.shortcutkey;
+  });
 
   const keyListener = e => {
-    if (!e.repeat && e.key === hotkey) {
+    if (!e.repeat && e.key === shortcutkey) {
       let targetURL = null;
 
       if (document.getElementById('EntryTitleLink-selected') !== null) {
