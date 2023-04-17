@@ -1,7 +1,7 @@
 # feedly-background-tab-open
 
 ## Overview
-Chrome Extension for opening Feedly articles in a background tab on "i" key.
+Chrome Extension for opening Feedly articles in a background tab on custom short cut key.
 
 Published on the [Chrome Web Store](https://chrome.google.com/webstore/detail/feedly-background-tab-ope/knekhffbanfpccociahfjklboipfkecm).
 
