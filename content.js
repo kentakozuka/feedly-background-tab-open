@@ -3,7 +3,7 @@
   chrome.storage.sync.get({ shortcutkey: 'i' }, function (items) {
     shortcutkey = items.shortcutkey;
   });
-  const keyListener = e => {
+  const keyListener = async (e) => {
     if (!e.repeat && e.key === shortcutkey) {
       let targetURL = null;
 
@@ -18,7 +18,14 @@
         targetURL = document.querySelector('.InlineArticle').querySelector('.Article__title').href;
       }
       if (targetURL !== null) {
-        chrome.runtime.sendMessage({ url: targetURL });
+        await chrome.runtime.sendMessage({ url: targetURL });
+        const xKeyEvent = new KeyboardEvent('keydown', {
+          key: 'x',
+          code: 'KeyX',
+          bubbles: true,
+          cancelable: true
+        });
+        document.body.dispatchEvent(xKeyEvent);
       } else {
         console.log('targetURL is Null');
       }
